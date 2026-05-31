@@ -130,14 +130,15 @@ function App() {
 
           <div className="buttons">
 
-  <button>View Projects</button>
+  {/* <button>View Projects</button> */}
+  <button className="btn2">View Projects</button> 
 
 <a
   href="/Resumeit.pdf"
   download="Aman_Singh_Resumeit.pdf"
-  className="btn2"
+  // className="btn2"
 >
-  Download Resume 📄
+  <button className="btn2">Download Resume </button>
 </a>
 </div>
 
@@ -272,15 +273,14 @@ function App() {
             </p>
 
             <div className="project-buttons">
-
-              <button>Live Demo</button>
-
-              <button className="btn2">
-                GitHub
-              </button>
-
-            </div>
-
+  <a
+    href="https://github.com/amansingh0006-Singh/AI-Portfolio"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <button className="btn2">GitHub</button>
+  </a>
+</div>
           </div>
 
           {/* Project 2 */}
@@ -295,23 +295,24 @@ function App() {
               alt="project"
             />
 
-            <h3>Python API Project</h3>
+            <h3>E-Commerce Website</h3>
 
             <p>
-              FastAPI backend project with APIs
-              and database integration.
+             Full-stack e-commerce platform with
+  product management, shopping cart,
+  admin panel and secure backend APIs.
             </p>
 
-            <div className="project-buttons">
+            <a
+  href="https://github.com/amansingh0006-Singh/E-COMMERCE-WEBSITE"
+  target="_blank"
+  rel="noopener noreferrer"
+  
+> 
+  <button className="btn2">GitHub</button>
+       {/* <button>GitHub</button> */}
 
-              <button>Live Demo</button>
-
-              <button className="btn2">
-                GitHub
-              </button>
-
-            </div>
-
+</a>
           </div>
 
           {/* Project 3 */}
@@ -326,22 +327,26 @@ function App() {
               alt="project"
             />
 
-            <h3>SQL Dashboard</h3>
+            <h3>Smart Text Lab</h3>
 
             <p>
-              Interactive dashboard with analytics
-              and SQL database support.
+              React-based text analysis web app with
+  dark mode, word counter, case conversion
+  and text formatting tools.
             </p>
 
-            <div className="project-buttons">
+            <a
+  href="https://github.com/amansingh0006-Singh/Smart-text-lab"
+  target="_blank"
+  rel="noopener noreferrer"
+  
+>
+ <button className="btn2">GitHub</button>
+</a>
 
-              <button>Live Demo</button>
+            
 
-              <button className="btn2">
-                GitHub
-              </button>
-
-            </div>
+              
 
           </div>
 

@@ -116,6 +116,12 @@ body{
   gap:20px;
 }
 
+.buttons button,
+.buttons .btn2{
+  width:220px;
+  height:60px;
+}
+
 button{
   padding:15px 35px;
   border:none;
@@ -280,7 +286,8 @@ button:hover{
   color:#cbd5e1;
   padding:0 20px;
   line-height:1.7;
-  margin-bottom:25px;
+  /* margin-bottom:25px;  */
+   min-height:100px;
 }
 
 .project-buttons{
@@ -659,25 +666,24 @@ button:hover{
 
 }
 .btn2{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  width:220px;
-  height:60px;
-
-  border:2px solid #00bfff;
-  border-radius:12px;
-
-  color:#00bfff;
-  text-decoration:none;
-  font-size:20px;
-  font-weight:600;
-
-  transition:0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; 
+  padding: 12px 28px;
+  min-width: 140px;
+  height: 50px;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.btn2:hover{
-  background:#00bfff;
-  color:#000;
+.project-buttons a{
+  text-decoration: none;
+}
+
+
+.project-card .btn2{
+  min-width:140px;
+  height:50px;
+  padding:12px 25px;
 }
