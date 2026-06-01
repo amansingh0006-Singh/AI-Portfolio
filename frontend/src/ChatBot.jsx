@@ -36,15 +36,24 @@ function ChatBot() {
 
     let botReply = "I am still learning 🤖";
 
-   if (input.toLowerCase().includes("hello")) {
-  botReply = "Hello 👋 Welcome to Aman Portfolio";
+   const msg = input.toLowerCase().trim();
+
+if (msg === "hi") {
+   botReply = "Hello 👋 Welcome to Aman Portfolio";
 }
-    else if (input.toLowerCase().includes("hi")) {
-  botReply = "Hello 👋 Welcome to Aman Portfolio";
+else if (msg === "hire") {
+   botReply = "You can hire Aman through the contact section 📩";
 }
-else if (input.toLowerCase().includes("skills")) {
-  botReply = "Aman knows React, Python, FastAPI and SQL 🚀";
+
+else if (msg === "skill") {
+   botReply = "skill   You can hire Aman through the contact section 📩";
 }
+else if (msg === "skills") {
+   botReply = "skill   You can hire Aman through the contact section 📩";
+}
+// else if (input.toLowerCase().includes("skills")) {
+//   botReply = "Aman knows React, Python, FastAPI and SQL 🚀";
+// }
 else if (input.toLowerCase().includes("contact")) {
   botReply = "You can contact Aman using the contact form 📩";
 }
@@ -53,9 +62,6 @@ else if (input.toLowerCase().includes("projects")) {
 }
 else if (input.toLowerCase().includes("github")) {
   botReply = "My GitHub profile is available in portfolio links 🔥";
-}
-else if (input.toLowerCase().includes("hire")) {
-  botReply = "You can hire Aman through the contact section 📩";
 }
 
     const botMessage = {
