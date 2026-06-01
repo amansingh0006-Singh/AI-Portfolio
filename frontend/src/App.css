@@ -168,7 +168,10 @@ button:hover{
 ========================= */
 
 .about{
-  padding:120px 80px;
+  min-height:100vh;
+  padding-top:180px;
+  padding-left:80px;
+  padding-right:80px;
   text-align:center;
 }
 
@@ -191,9 +194,12 @@ button:hover{
 ========================= */
 
 .skills{
+  min-height:100vh;
   padding:120px 80px;
   text-align:center;
 }
+
+
 
 .skills h2{
   font-size:50px;
@@ -239,6 +245,7 @@ button:hover{
 ========================= */
 
 .projects{
+  min-height:100vh;
   padding:120px 80px;
   text-align:center;
 }
@@ -686,4 +693,14 @@ button:hover{
   min-width:140px;
   height:50px;
   padding:12px 25px;
+}
+
+
+.contact-right a{
+  color: white;
+  text-decoration: none;
+}
+
+.contact-right a:hover{
+  color: #00cfff;
 }

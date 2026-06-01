@@ -5,8 +5,8 @@ import { Typewriter } from "react-simple-typewriter";
 import { FaBars, FaTimes } from "react-icons/fa";
 import ChatBot from "./ChatBot";    
 
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 
 import { useEffect, useState } from "react";
 
@@ -16,11 +16,11 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   // AOS ANIMATION
-  useEffect(() => {
-    AOS.init({
-      duration: 1200,
-    });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({
+  //     duration: 1200,
+  //   });
+  // }, []);
 
   // MOUSE GLOW EFFECT
   useEffect(() => {
@@ -131,7 +131,9 @@ function App() {
           <div className="buttons">
 
   {/* <button>View Projects</button> */}
-  <button className="btn2">View Projects</button> 
+ <a href="#projects">
+  <button className="btn2">View Projects</button>
+</a> 
 
 <a
   href="/Resumeit.pdf"
@@ -161,86 +163,107 @@ function App() {
       <section
         id="about"
         className="about"
-        data-aos="fade-up"
+        // data-aos="fade-up"
       >
 
         <h2>About Me</h2>
 
         <p>
-          I'm Aman Singh, a passionate Python and React developer.
+          {/* I'm Aman Singh, a passionate Python and React developer.
           I love building modern websites, AI projects and interactive
           user experiences. My goal is to become a professional
-          AI Full Stack Developer 🚀
+          AI Full Stack Developer 🚀 */}
+          I'm Aman Singh, a Python Developer passionate about building modern web applications,
+           AI-powered solutions, and responsive user interfaces. I enjoy working with Python, FastAPI, 
+           React.js, SQL, and modern web technologies. My goal is to become a 
+           professional AI Full-Stack Developer.
         </p>
 
       </section>
+{/* ================= SKILLS SECTION ================= */}
 
-      {/* ================= SKILLS SECTION ================= */}
+<section
+  id="skills"
+  className="skills"
+>
 
-      <section
-        id="skills"
-        className="skills"
-      >
+  <h2>My Skills</h2>
 
-        <h2>My Skills</h2>
+  <div className="skill-cards">
 
-        <div className="skill-cards">
+    <div
+      className="card"
+      // data-aos="zoom-in"
+    >
+      <h3>Python</h3>
+      <p>
+        Backend Development & AI Projects
+      </p>
+    </div>
 
-          <div
-            className="card"
-            data-aos="zoom-in"
-          >
+    <div
+      className="card"
+      data-aos="zoom-in"
+    >
+      <h3>React.js</h3>
+      <p>
+        Modern Frontend UI Development
+      </p>
+    </div>
 
-            <h3>Python</h3>
+    <div
+      className="card"
+      data-aos="zoom-in"
+    >
+      <h3>SQL</h3>
+      <p>
+        Database Management & Queries
+      </p>
+    </div>
 
-            <p>
-              Backend Development & AI Projects
-            </p>
+    <div
+      className="card"
+      data-aos="zoom-in"
+    >
+      <h3>FastAPI</h3>
+      <p>
+        High Performance Python APIs
+      </p>
+    </div>
 
-          </div>
+    <div
+      className="card"
+      data-aos="zoom-in"
+    >
+      <h3>JavaScript</h3>
+      <p>
+        Interactive Web Development
+      </p>
+    </div>
 
-          <div
-            className="card"
-            data-aos="zoom-in"
-          >
+    <div
+      className="card"
+      data-aos="zoom-in"
+    >
+      <h3>Tailwind CSS</h3>
+      <p>
+        Modern Utility First CSS Framework
+      </p>
+    </div>
 
-            <h3>React.js</h3>
+    <div
+      className="card"
+      data-aos="zoom-in"
+    >
+      <h3>AI Tools</h3>
+      <p>
+        ChatGPT, Claude, Gemini & AI Workflows
+      </p>
+    </div>
 
-            <p>
-              Modern Frontend UI Development
-            </p>
+  </div>
 
-          </div>
-
-          <div
-            className="card"
-            data-aos="zoom-in"
-          >
-
-            <h3>SQL</h3>
-
-            <p>
-              Database Management & Queries
-            </p>
-
-          </div>
-
-          <div
-            className="card"
-            data-aos="zoom-in"
-          >
-
-            <h3>FastAPI</h3>
-
-            <p>
-              High Performance Python APIs
-            </p>
-
-          </div>
-
-        </div>
-
-      </section>
+</section>
 
       {/* ================= PROJECT SECTION ================= */}
 
@@ -257,7 +280,7 @@ function App() {
 
           <div
             className="project-card"
-            data-aos="fade-up"
+            // data-aos="fade-up"
           >
 
             <img
@@ -281,7 +304,7 @@ function App() {
     <button className="btn2">GitHub</button>
   </a>
 </div>
-          </div>
+ </div>
 
           {/* Project 2 */}
 
@@ -307,13 +330,11 @@ function App() {
   href="https://github.com/amansingh0006-Singh/E-COMMERCE-WEBSITE"
   target="_blank"
   rel="noopener noreferrer"
-  
-> 
+  > 
   <button className="btn2">GitHub</button>
        {/* <button>GitHub</button> */}
-
 </a>
-          </div>
+</div>
 
           {/* Project 3 */}
 
@@ -343,16 +364,9 @@ function App() {
 >
  <button className="btn2">GitHub</button>
 </a>
-
-            
-
-              
-
-          </div>
-
-        </div>
-
-      </section>
+</div>
+</div>
+</section>
 
       {/* ================= CONTACT SECTION ================= */}
 
