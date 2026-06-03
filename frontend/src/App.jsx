@@ -136,8 +136,8 @@ function App() {
 </a> 
 
 <a
-  href="/ResumeIT.pdf"
-  download="Aman_Singh_ResumeIT.pdf"
+  href="/ResumeLNK.pdf"
+  download="Aman_Singh_ResumeLNK.pdf"
   // className="btn2"
 >
   <button className="btn2">Download Resume </button>
