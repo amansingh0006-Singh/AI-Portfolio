@@ -88,9 +88,9 @@ body{
 }
 
 .left h1{
-  font-size:75px;
+  font-size:42px; 
   line-height:1.2;
-  margin-bottom:20px;
+   word-break:break-word;
 }
 
 .left span{
@@ -400,6 +400,14 @@ button:hover{
   transition:0.05s;
 }
 
+@media (max-width:768px){
+  .mouse-glow{
+    display:none;
+  }
+}
+
+
+
 /* =========================
    FLOAT ANIMATION
 ========================= */
@@ -477,8 +485,10 @@ button:hover{
   }
 
   .left h1{
-    font-size:55px;
-  }
+  font-size:42px;
+  line-height:1.2;
+  word-break:break-word;
+}
 
   .left h2{
     font-size:32px;
@@ -703,4 +713,17 @@ button:hover{
 
 .contact-right a:hover{
   color: #00cfff;
+}
+
+.hero{
+  width:100%;
+  overflow:hidden;
+}
+
+html{
+  overflow-x:hidden;
+}
+
+body{
+  overflow-x:hidden;
 }
