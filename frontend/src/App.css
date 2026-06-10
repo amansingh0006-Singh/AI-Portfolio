@@ -485,9 +485,8 @@ button:hover{
   }
 
   .left h1{
-  font-size:42px;
+  font-size:36px;
   line-height:1.2;
-  word-break:break-word;
 }
 
   .left h2{
@@ -511,7 +510,11 @@ button:hover{
   /* ABOUT */
 
   .about{
-    padding:100px 20px;
+  padding:80px 20px 40px;
+}
+
+  .about{
+  min-height:auto;
   }
 
   .about h2{
@@ -524,9 +527,14 @@ button:hover{
 
   /* SKILLS */
 
+.skills{
+  padding:40px 20px;
+}  
+
   .skills{
-    padding:100px 20px;
+  min-height:auto;
   }
+
 
   .skills h2{
     font-size:40px;
@@ -540,6 +548,10 @@ button:hover{
 
   .projects{
     padding:100px 20px;
+  }
+
+  .projects{
+  min-height:auto;
   }
 
   .projects h2{
@@ -556,6 +568,10 @@ button:hover{
     padding:30px 20px;
   }
 
+  .contact-section{
+  min-height:auto;
+  }
+
   .contact-container h1{
     font-size:40px;
   }
@@ -564,12 +580,17 @@ button:hover{
     flex-direction:column;
   }
 
+.contact-left,
+.contact-right{
+  min-width:100%;
+}
+
 .hero,
 .about,
 .skills,
 .projects{
-    padding-left:20px;
-    padding-right:20px;
+  padding-left:20px;
+  padding-right:20px;
 }
 
 
@@ -684,10 +705,12 @@ button:hover{
 
   
   .left h1{
-    font-size:42px;
-    line-height:1.2;
-    word-break:break-word;
+  font-size:48px;
+  line-height:1.2;
+  margin-bottom:20px;
+  word-break:break-word;
 }
+    
 
 
   .right img{
