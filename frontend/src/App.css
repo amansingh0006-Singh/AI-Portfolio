@@ -564,7 +564,17 @@ button:hover{
     flex-direction:column;
   }
 
+.hero,
+.about,
+.skills,
+.projects{
+    padding-left:20px;
+    padding-right:20px;
 }
+
+
+}
+
 
 /* =========================
    FIX SKILLS & PROJECT CARDS
@@ -672,9 +682,13 @@ button:hover{
     text-align:center;
   }
 
+  
   .left h1{
-    font-size:55px;
-  }
+    font-size:42px;
+    line-height:1.2;
+    word-break:break-word;
+}
+
 
   .right img{
     width:100%;
