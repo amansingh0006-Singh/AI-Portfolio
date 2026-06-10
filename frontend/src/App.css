@@ -703,12 +703,16 @@ button:hover{
     text-align:center;
   }
 
+ .left{
+  width:100%;
+} 
   
-  .left h1{
-  font-size:48px;
+ .left h1{
+  font-size:30px;
   line-height:1.2;
   margin-bottom:20px;
   word-break:break-word;
+  text-align:center;
 }
     
 
