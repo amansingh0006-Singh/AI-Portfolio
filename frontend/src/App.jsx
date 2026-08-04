@@ -130,14 +130,14 @@ function App() {
 
           <div className="buttons">
 
-  {/* <button>View Projects</button> */}
+  {/* <button>View Projects</button> */} 
  <a href="#projects">
   <button className="btn2">View Projects</button>
 </a> 
 
 <a
-  href="/ResumeLNK.pdf"
-  download="Aman_Singh_ResumeLNK.pdf"
+  href="/Resume Aman.pdf"
+  download="Aman_Singh_Resume Aman.pdf"
   // className="btn2"
 >
   <button className="btn2">Download Resume </button>
