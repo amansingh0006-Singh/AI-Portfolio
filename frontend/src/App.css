@@ -791,7 +791,7 @@ body::before {
   content: "";
   position: fixed;
   inset: -20%;
-  z-index: 1000;
+  z-index: 1;
   pointer-events: none;
 
   background:
