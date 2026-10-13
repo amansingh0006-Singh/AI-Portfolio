@@ -817,3 +817,56 @@ body::before {
     animation: none;
   }
 }
+
+
+
+
+/* ===== PREMIUM BLUE-PURPLE GLOW ===== */
+
+body {
+  background-color: #020617;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -20%;
+  z-index: -1;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at 20% 25%,
+      rgba(0, 180, 255, 0.18),
+      transparent 38%
+    ),
+    radial-gradient(
+      ellipse at 80% 65%,
+      rgba(120, 50, 255, 0.18),
+      transparent 40%
+    ),
+    radial-gradient(
+      ellipse at 50% 100%,
+      rgba(0, 90, 255, 0.12),
+      transparent 45%
+    );
+
+  animation: premiumGlow 12s ease-in-out infinite alternate;
+}
+
+@keyframes premiumGlow {
+  from {
+    transform: translate3d(-2%, -1%, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(2%, 1%, 0) scale(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    animation: none;
+  }
+}
