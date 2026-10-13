@@ -2,6 +2,7 @@ import "./App.css";
 import Contact from "./contact";
 import BackgroundEffects from "./components/BackgroundEffects";
 import OrbitRings from "./components/OrbitRings";
+import ShootingStars from "./components/ShootingStars";
 
 import { Typewriter } from "react-simple-typewriter";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -52,6 +53,7 @@ function App() {
 
       <BackgroundEffects />
        <OrbitRings />
+       <ShootingStars />
 
       {/* Mouse Glow */}
       <div className="mouse-glow"></div>
