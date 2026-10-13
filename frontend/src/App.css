@@ -778,35 +778,55 @@ body{
 /* ===== PREMIUM ANIMATED BACKGROUND ===== */
 
 body {
-  background-color: #020617;
-  background-image:
+  background: #020617;
+  position: relative;
+  isolation: isolate;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -35%;
+  z-index: -1;
+  pointer-events: none;
+
+  background:
     radial-gradient(
-      ellipse at 15% 35%,
-      rgba(0, 180, 255, 0.13),
-      transparent 38%
+      ellipse at 20% 30%,
+      rgba(0, 195, 255, 0.32) 0%,
+      transparent 42%
     ),
     radial-gradient(
-      ellipse at 85% 65%,
-      rgba(0, 100, 255, 0.12),
-      transparent 40%
+      ellipse at 80% 70%,
+      rgba(45, 70, 255, 0.28) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 50% 50%,
+      rgba(0, 110, 255, 0.12) 0%,
+      transparent 55%
     );
-  background-size: 140% 140%;
-  background-attachment: fixed;
-  animation: portfolioGlow 14s ease-in-out infinite alternate;
+
+  background-size: 160% 160%;
+  animation: portfolioGlow 10s ease-in-out infinite alternate;
 }
 
 @keyframes portfolioGlow {
-  from {
-    background-position: 0% 0%;
+  0% {
+    transform: translate3d(-4%, -3%, 0) scale(1);
   }
 
-  to {
-    background-position: 100% 100%;
+  50% {
+    transform: translate3d(3%, 2%, 0) scale(1.05);
+  }
+
+  100% {
+    transform: translate3d(-2%, 4%, 0) scale(1.02);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  body {
+  body::before {
     animation: none;
   }
 }
