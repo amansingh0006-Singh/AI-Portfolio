@@ -1,5 +1,6 @@
 import "./App.css";
 import Contact from "./contact";
+import BackgroundEffects from "./components/BackgroundEffects";
 
 import { Typewriter } from "react-simple-typewriter";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -47,6 +48,8 @@ function App() {
   return (
 
     <div>
+
+      <BackgroundEffects />
 
       {/* Mouse Glow */}
       <div className="mouse-glow"></div>
