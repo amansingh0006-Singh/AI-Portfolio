@@ -1,6 +1,7 @@
 import "./App.css";
 import Contact from "./contact";
 import BackgroundEffects from "./components/BackgroundEffects";
+import OrbitRings from "./components/OrbitRings";
 
 import { Typewriter } from "react-simple-typewriter";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -50,6 +51,7 @@ function App() {
     <div>
 
       <BackgroundEffects />
+       <OrbitRings />
 
       {/* Mouse Glow */}
       <div className="mouse-glow"></div>
