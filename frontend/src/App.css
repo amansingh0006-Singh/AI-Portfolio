@@ -772,3 +772,41 @@ html{
 body{
   overflow-x:hidden;
 }
+
+
+
+/* ===== PREMIUM ANIMATED BACKGROUND ===== */
+
+body {
+  background-color: #020617;
+  background-image:
+    radial-gradient(
+      ellipse at 15% 35%,
+      rgba(0, 180, 255, 0.13),
+      transparent 38%
+    ),
+    radial-gradient(
+      ellipse at 85% 65%,
+      rgba(0, 100, 255, 0.12),
+      transparent 40%
+    );
+  background-size: 140% 140%;
+  background-attachment: fixed;
+  animation: portfolioGlow 14s ease-in-out infinite alternate;
+}
+
+@keyframes portfolioGlow {
+  from {
+    background-position: 0% 0%;
+  }
+
+  to {
+    background-position: 100% 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+  }
+}
