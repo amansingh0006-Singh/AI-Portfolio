@@ -1,0 +1,85 @@
+
+.orbit-rings {
+  position: fixed;
+  width: 280px;
+  height: 280px;
+  right: 5%;
+  bottom: 8%;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.65;
+}
+
+.orbit-ring {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(56, 189, 248, 0.55);
+  border-radius: 50%;
+  box-shadow:
+    0 0 12px rgba(56, 189, 248, 0.15),
+    inset 0 0 12px rgba(56, 189, 248, 0.08);
+}
+
+.orbit-ring-one {
+  transform: rotateX(65deg);
+  animation: orbitSpinOne 9s linear infinite;
+}
+
+.orbit-ring-two {
+  transform: rotateY(65deg);
+  border-color: rgba(139, 92, 246, 0.65);
+  animation: orbitSpinTwo 12s linear infinite;
+}
+
+.orbit-ring-three {
+  inset: 18%;
+  border-color: rgba(0, 200, 255, 0.7);
+  animation: orbitSpinThree 7s linear infinite;
+}
+
+.orbit-dot {
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 15px #38bdf8;
+}
+
+.orbit-ring-two .orbit-dot {
+  background: #a78bfa;
+  box-shadow: 0 0 15px #a78bfa;
+}
+
+@keyframes orbitSpinOne {
+  from { transform: rotateX(65deg) rotate(0deg); }
+  to { transform: rotateX(65deg) rotate(360deg); }
+}
+
+@keyframes orbitSpinTwo {
+  from { transform: rotateY(65deg) rotate(0deg); }
+  to { transform: rotateY(65deg) rotate(360deg); }
+}
+
+@keyframes orbitSpinThree {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .orbit-rings {
+    width: 150px;
+    height: 150px;
+    right: 3%;
+    bottom: 4%;
+    opacity: 0.4;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit-ring {
+    animation: none;
+  }
+}
