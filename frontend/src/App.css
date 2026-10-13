@@ -797,17 +797,17 @@ body::before {
   background:
     radial-gradient(
       ellipse at 20% 25%,
-      rgba(0, 180, 255, 0.18),
+      rgba(0, 180, 255, 0.32),
       transparent 38%
     ),
     radial-gradient(
       ellipse at 80% 65%,
-      rgba(120, 50, 255, 0.18),
+      rgba(120, 50, 255, 0.30),
       transparent 40%
     ),
     radial-gradient(
       ellipse at 50% 100%,
-      rgba(0, 90, 255, 0.12),
+      rgba(0, 90, 255, 0.20),
       transparent 45%
     );
 
