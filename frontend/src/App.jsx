@@ -26,26 +26,42 @@ function App() {
   // }, []);
 
   // MOUSE GLOW EFFECT
+  
   useEffect(() => {
-
     const glow = document.querySelector(".mouse-glow");
 
+    if (!glow) return;
+
+    let targetX = window.innerWidth / 2;
+    let targetY = window.innerHeight / 2;
+    let currentX = targetX;
+    let currentY = targetY;
+    let animationFrame;
+
     const moveGlow = (e) => {
+      targetX = e.clientX;
+      targetY = e.clientY;
+    };
 
-      if(glow){
-        glow.style.left = e.clientX + "px";
-        glow.style.top = e.clientY + "px";
-      }
+    const animateGlow = () => {
+      currentX += (targetX - currentX) * 0.12;
+      currentY += (targetY - currentY) * 0.12;
 
+      glow.style.transform =
+        `translate3d(${currentX}px, ${currentY}px, 0) translate(-50%, -50%)`;
+
+      animationFrame = requestAnimationFrame(animateGlow);
     };
 
     window.addEventListener("mousemove", moveGlow);
+    animationFrame = requestAnimationFrame(animateGlow);
 
     return () => {
       window.removeEventListener("mousemove", moveGlow);
+      cancelAnimationFrame(animationFrame);
     };
-
   }, []);
+
 
   return (
 
