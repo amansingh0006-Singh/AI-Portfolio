@@ -143,7 +143,7 @@ function App() {
 </a> 
 
 <a
-  href="/Aman Resume.pdf"
+  href="/AMAN RESUME IP"
   download="Aman_Singh_Aman Resume.pdf"
   // className="btn2"
 >
