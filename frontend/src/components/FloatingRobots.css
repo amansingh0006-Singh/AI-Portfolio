@@ -33,7 +33,8 @@
   width: 135px;
   height: 165px;
   filter: drop-shadow(0 0 14px rgba(167, 139, 250, 0.35));
-  animation-delay: -2s;
+  /* animation-delay: -2s; */
+  animation-delay: 0s;
 }
 
 .robot-three {
@@ -43,7 +44,8 @@
   width: 140px;
   height: 165px;
   filter: drop-shadow(0 0 14px rgba(248, 70, 100, 0.3));
-  animation-delay: -4s;
+  /* animation-delay: -4s; */
+  animation-delay: 0s;
 }
 
 .robot-four {
@@ -54,7 +56,8 @@
   width: 175px;
   height: 200px;
   filter: drop-shadow(0 0 14px rgba(56, 189, 248, 0.35));
-  animation-delay: -1s;
+  /* animation-delay: -1s; */
+  animation-delay: 0s;
 }
 
 @keyframes robotFloat {
