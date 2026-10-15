@@ -17,13 +17,13 @@ const scenes = [
 export default function FloatingRobots() {
   const [sceneIndex, setSceneIndex] = useState(0);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setSceneIndex((current) => (current + 1) % scenes.length);
-    }, 5000);
+//   useEffect(() => {
+//     const timer = setInterval(() => {
+//       setSceneIndex((current) => (current + 1) % scenes.length);
+//     }, 5000);
 
-    return () => clearInterval(timer);
-  }, []);
+//     return () => clearInterval(timer);
+//   }, []);
 
   return (
     <div className="floating-robots-layer" aria-hidden="true">

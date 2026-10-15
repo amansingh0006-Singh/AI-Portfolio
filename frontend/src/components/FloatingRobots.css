@@ -29,8 +29,8 @@
 .robot-two {
   /* top: 46%; */
   top: 22%;
-  right: 2%;
-  width: 135px;
+  right: -2%;
+  width: 250px;
   height: 165px;
   filter: drop-shadow(0 0 14px rgba(167, 139, 250, 0.35));
   /* animation-delay: -2s; */
@@ -40,8 +40,8 @@
 .robot-three {
   bottom: 8%;
   /* left: 17%; */
-  left: 2%;
-  width: 140px;
+  left: -3%;
+  width: 300px;
   height: 165px;
   filter: drop-shadow(0 0 14px rgba(248, 70, 100, 0.3));
   /* animation-delay: -4s; */
@@ -52,7 +52,7 @@
   /* top: 35%; */
   bottom: 8%;
   /* right: 8%; */
-  right: 2%;
+  right: 1%;
   width: 175px;
   height: 200px;
   filter: drop-shadow(0 0 14px rgba(56, 189, 248, 0.35));
