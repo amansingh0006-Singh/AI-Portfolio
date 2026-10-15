@@ -1,62 +1,41 @@
+
+import { useEffect, useState } from "react";
 import "./FloatingRobots.css";
 
-const robots = [
-{ id: 1, className: "robot-one" },
-{ id: 2, className: "robot-two" },
-{ id: 3, className: "robot-three" },
+const scenes = [
+  [
+    { src: "/robot-blue.png", className: "robot-one" },
+    { src: "/robot-purple.png", className: "robot-two" },
+    { src: "/robot-red.png", className: "robot-three" },
+  ],
+  [
+    { src: "/Coffee robot.png", className: "robot-four" },
+    { src: "/robot-purple.png", className: "robot-two" },
+  ],
 ];
 
-function FloatingRobot({ className }) {
-return (
-<div className={`floating-robot ${className}`} aria-hidden="true">
-<div className="robot-antenna">
-<span />
-</div>
-
-```
-  <div className="robot-head">
-    <div className="robot-ear robot-ear-left" />
-    <div className="robot-ear robot-ear-right" />
-
-    <div className="robot-eyes">
-      <span />
-      <span />
-    </div>
-
-    <div className="robot-mouth" />
-  </div>
-
-  <div className="robot-body">
-    <div className="robot-chest-light" />
-    <div className="robot-arm robot-arm-left" />
-    <div className="robot-arm robot-arm-right" />
-  </div>
-
-  <div className="robot-laptop">
-    <div className="robot-screen">
-      <span />
-      <span />
-      <span />
-    </div>
-    <div className="robot-keyboard" />
-  </div>
-
-  <div className="robot-shadow" />
-</div>
-
-
-);
-}
-
 export default function FloatingRobots() {
-return (
-<div className="floating-robots-layer">
-{robots.map((robot) => (
-<FloatingRobot
-key={robot.id}
-className={robot.className}
-/>
-))}
-</div>
-);
+  const [sceneIndex, setSceneIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setSceneIndex((current) => (current + 1) % scenes.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="floating-robots-layer" aria-hidden="true">
+      {scenes[sceneIndex].map((robot) => (
+        <img
+          key={`${sceneIndex}-${robot.src}`}
+          src={robot.src}
+          alt=""
+          className={`floating-robot ${robot.className}`}
+          draggable="false"
+        />
+      ))}
+    </div>
+  );
 }
