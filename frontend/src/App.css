@@ -879,3 +879,261 @@ body::before {
     transform: none;
   }
 }
+
+
+
+/* ===== FULL-SCREEN HERO SLIDESHOW ===== */
+
+.hero-slideshow {
+  position: relative;
+  min-height: calc(100vh - 90px);
+  overflow: hidden;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  padding: 50px 6%;
+  background: #020617;
+  transition: background 0.8s ease;
+}
+
+.hero-slideshow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at 75% 45%,
+    rgba(56, 189, 248, 0.2),
+    transparent 38%
+  );
+}
+
+.hero-slideshow.theme-purple::before {
+  background: radial-gradient(
+    circle at 75% 45%,
+    rgba(139, 92, 246, 0.28),
+    transparent 40%
+  );
+}
+
+.hero-slideshow.theme-red::before {
+  background: radial-gradient(
+    circle at 75% 45%,
+    rgba(239, 68, 68, 0.2),
+    transparent 40%
+  );
+}
+
+.hero-slide-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 35px;
+  animation: heroSlideEnter 0.8s ease both;
+}
+
+.hero-slide-content .left {
+  width: 100%;
+  text-align: left;
+}
+
+.hero-eyebrow {
+  color: #38bdf8;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.hero-slide-content h1 {
+  line-height: 1.2;
+}
+
+.hero-slide-content h2 {
+  color: #38bdf8;
+  margin: 18px 0;
+}
+
+.slide-title {
+  color: #c4b5fd;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  margin: 12px 0;
+}
+
+.hero-slide-content .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.hero-slide-content .btn2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hero-robot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+
+.hero-robot img {
+  display: block;
+  width: min(100%, 430px);
+  height: 430px;
+  object-fit: contain;
+  background: transparent;
+  filter: drop-shadow(0 0 28px rgba(56, 189, 248, 0.25));
+  animation: robotHover 4s ease-in-out infinite;
+}
+
+.theme-purple .hero-robot img {
+  filter: drop-shadow(0 0 28px rgba(167, 139, 250, 0.35));
+}
+
+.theme-red .hero-robot img {
+  filter: drop-shadow(0 0 28px rgba(248, 113, 113, 0.3));
+}
+
+.slide-controls {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 5;
+}
+
+.slide-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #64748b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slide-dot.active {
+  width: 30px;
+  border-radius: 10px;
+  background: #38bdf8;
+}
+
+@keyframes heroSlideEnter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes robotHover {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-slideshow {
+    min-height: calc(100svh - 75px);
+    padding: 45px 22px 65px;
+  }
+
+  .hero-slide-content {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .hero-slide-content .left {
+    text-align: center;
+  }
+
+  .hero-slide-content .buttons {
+    justify-content: center;
+  }
+
+  .hero-robot img {
+    width: min(78vw, 300px);
+    height: 260px;
+  }
+
+  .hero-slide-content h1 {
+    font-size: clamp(1.8rem, 7vw, 2.6rem);
+  }
+
+  .hero-slide-content h2 {
+    font-size: 1.35rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide-content,
+  .hero-robot img {
+    animation: none;
+  }
+}
+
+
+
+
+
+/* Move hero slideshow slightly downward */
+.hero-slideshow {
+  box-sizing: border-box;
+  padding-top: 75px;
+  padding-bottom: 50px;
+}
+
+.hero-slide-content {
+  transform: translateY(12px);
+}
+
+@media (max-width: 768px) {
+  .hero-slideshow {
+    padding-top: 45px;
+    padding-bottom: 65px;
+  }
+
+  .hero-slide-content {
+    transform: none;
+  }
+}
+
+
+/* Fix hero heading hidden behind navbar */
+.hero-slideshow {
+  padding-top: 200px !important;
+  padding-bottom: 50px !important;
+  min-height: calc(100vh - 90px);
+  height: auto;
+}
+
+.hero-slide-content {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .hero-slideshow {
+    padding-top: 55px !important;
+  }
+
+  .hero-slide-content {
+    margin-top: 0;
+  }
+}

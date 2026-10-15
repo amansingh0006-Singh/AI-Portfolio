@@ -26,6 +26,45 @@ function App() {
   //   });
   // }, []);
 
+const [slideIndex, setSlideIndex] = useState(0);
+
+const slides = [
+  {
+    title: "AI & Technology",
+    subtitle: "Python Developer 🚀",
+    description:
+      "Building modern web applications, AI projects and intelligent solutions.",
+    image: "/robot-blue.png",
+    theme: "blue",
+  },
+  {
+    title: "Developer Workspace",
+    subtitle: "React & FastAPI Developer",
+    description:
+      "Creating responsive interfaces and powerful Python backends.",
+    image: "/coffee-robot.png",
+    theme: "purple",
+  },
+  {
+    title: "Welcome to My Portfolio",
+    subtitle: "AI Full Stack Developer 🤖",
+    description:
+      "Explore my projects, technical skills and development journey.",
+    image: "/robot-red.png",
+    theme: "red",
+  },
+];
+
+useEffect(() => {
+  const timer = setInterval(() => {
+    setSlideIndex((current) => (current + 1) % slides.length);
+  }, 6000);
+
+  return () => clearInterval(timer);
+}, []);
+
+
+
   // MOUSE GLOW EFFECT
   
   useEffect(() => {
@@ -69,11 +108,8 @@ function App() {
     <div>
 
       <BackgroundEffects />
-      <FloatingRobots />
-      <OrbitRings />
-      <ShootingStars />
-      <FloatingRobots />
-
+       <OrbitRings />
+       <ShootingStars />
       {/* Mouse Glow */}
       <div className="mouse-glow"></div>
 
@@ -81,7 +117,7 @@ function App() {
 
       <nav className="navbar">
 
-        <h1 className="logo">Aman.dev</h1>
+        <h1 className="logo">Welcome to My Portfolio</h1>
 
         {/* Hamburger Icon */}
         <div
@@ -121,68 +157,67 @@ function App() {
 
       </nav>
 
-      {/* ================= HERO SECTION ================= */}
+      {/* ================= HERO SLIDESHOW ================= */}
 
-      <section id="home" className="hero">
-
-        <div className="left">
-
-          <h1>
-            Hi, I'm <span>Aman Singh</span>
-          </h1>
-
-          <h2>
-
-            <Typewriter
-              words={[
-                "Python Developer 🚀",
-                "React Developer ⚛️",
-                "AI Full Stack Developer 🤖",
-                "FastAPI Developer 🔥",
-              ]}
-              loop={0}
-              cursor
-              cursorStyle="|"
-              typeSpeed={80}
-              deleteSpeed={50}
-              delaySpeed={1500}
-            />
-
-          </h2>
-
-          <p>
-            I build modern websites, AI projects and premium user experiences.
-          </p>
-
-          <div className="buttons">
-
-  {/* <button>View Projects</button> */} 
- <a href="#projects">
-  <button className="btn2">View Projects</button>
-</a> 
-
-<a
-  href="/AMAN RESUME IP.pdf"
-  download="Aman_Singh_AMAN RESUME IP.pdf"
-  // className="btn2"
+<section
+  id="home"
+  className={`hero hero-slideshow theme-${slides[slideIndex].theme}`}
 >
-  <button className="btn2">Download Resume </button>
-</a>
-</div>
+  <div className="hero-slide-content" key={slideIndex}>
+    <div className="left">
+      <p className="hero-eyebrow">
+        INNOVATING WITH CODE & AI
+        {/* INNOVATING WITH CODE & AI */}
+        {/* BUILDING IDEAS INTO INTELLIGENT SOLUTIONS */}
+      </p>
 
+      <h1>
+        Hi, I'm <span>Aman Singh</span>
+      </h1>
 
-        </div>
+      <h2>{slides[slideIndex].subtitle}</h2>
 
-        <div className="right">
+      <h3 className="slide-title">
+        {slides[slideIndex].title}
+      </h3>
 
-          <img
-            src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4"
-            alt="coding"
-          />
+      <p>{slides[slideIndex].description}</p>
 
-        </div>
+      <div className="buttons">
+        <a href="#projects" className="btn2">
+          View Projects
+        </a>
 
-      </section>
+        <a
+          href="/AMAN RESUME IP.pdf"
+          download="Aman_Singh_Resume.pdf"
+          className="btn2"
+        >
+          Download Resume
+        </a>
+      </div>
+    </div>
+
+    <div className="right hero-robot">
+      <img
+        src={slides[slideIndex].image}
+        alt={`${slides[slideIndex].title} robot`}
+      />
+    </div>
+  </div>
+
+  <div className="slide-controls">
+    {slides.map((slide, index) => (
+      <button
+        key={slide.theme}
+        className={index === slideIndex ? "slide-dot active" : "slide-dot"}
+        onClick={() => setSlideIndex(index)}
+        aria-label={`Show slide ${index + 1}`}
+        aria-pressed={index === slideIndex}
+      />
+    ))}
+  </div>
+</section>
 
       {/* ================= ABOUT SECTION ================= */}
 
