@@ -9,7 +9,7 @@ const scenes = [
     { src: "/robot-red.png", className: "robot-three" },
   ],
   [
-    { src: "/Coffee robot.png", className: "robot-four" },
+    { src: "/coffee-robot.png", className: "robot-four" },
     { src: "/robot-purple.png", className: "robot-two" },
   ],
 ];
